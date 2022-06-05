@@ -17,16 +17,18 @@ namespace Ejercicio1
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public int Duracion { get => duracion; set => duracion = value; }
 
-
-
-        public static tareas creartarea(){
+        public static tareas creartarea( int i){
+           
             tareas nuevatarea = new tareas();
             Random rand = new Random();
             Console.WriteLine("Ingrese Descripcion ");
             nuevatarea.Descripcion = Console.ReadLine();
-            nuevatarea.Duracion = rand.Next(1,12);
+            nuevatarea.TareaId +=i ;
+            nuevatarea.Duracion = rand.Next(1,18);
             return nuevatarea;
 
         }
+
+        
     }
 }
